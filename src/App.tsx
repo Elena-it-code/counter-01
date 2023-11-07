@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {MouseEventHandler, useState} from 'react';
 import './App.css';
+import {Scoreboard} from "./scoreboard/Scoreboard";
+import {Button} from "./button/Button";
 
 function App() {
+  let [a, setState] = useState(0);
+
+  const onClickHandler = () => {
+    a < 5 ? setState(++a) : setState(5)
+  }
+
+  const onClickResetHandler = () => {
+    setState(0)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      <div className="App">
+        <Scoreboard a={a}/>
+        <Button a={a} onClickResetHandler={onClickResetHandler} onClickHandler={onClickHandler}/>
+      </div>
+  )
 }
 
 export default App;
