@@ -14,7 +14,8 @@ export const Button = (props: ButtonsPropsType) => {
             <button className={props.a < 5 ? 'inc' : 'error-inc'} onClick={() => {props.onClickHandler()}}>
                 inc
             </button>
-            <button className={props.a === 0 ? 'error-reset' : 'reset'} onClick={() => {props.onClickResetHandler()}}>
+            {/*<button className={props.a === 0 ? 'error-reset' : 'reset'} onClick={() => {props.onClickResetHandler()}}>*/}
+            <button className={'reset'} onClick={() => {props.onClickResetHandler()}}>
                 reset
             </button>
 
