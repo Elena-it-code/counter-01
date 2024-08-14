@@ -24,6 +24,13 @@ export const Button = (props: ButtonsPropsType) => {
 }
 
 
+
+
+
+
+
+
+
 //------------------------------------------------------------
 // type ButtonsPropsType ={
 //     name: string
@@ -35,3 +42,5 @@ export const Button = (props: ButtonsPropsType) => {
 //         <button onClick={props.callback}>{props.name}</button>
 //     )
 // }
+
+
